@@ -5,7 +5,7 @@
         public static void Main(String [] args)
         {
            
-            string frequency = "Fear leads to anger ; anger leads to hatred ; hatred leads to conflict ; conflict leads to suffering.";
+            string frequency = "To be or not to be";
 
             //declaring List to compare hash table items with
             List<string> compareList = new List<string>();
