@@ -5,7 +5,7 @@
         public static void Main(String [] args)
         {
            
-            string frequency = "To be or not to be";
+            string frequency = "Paranoids are not paranoid because they are paranoid but because they keep putting themselves deliberately into paranoid avoidable situations";
 
             //declaring List to compare hash table items with
             List<string> compareList = new List<string>();
