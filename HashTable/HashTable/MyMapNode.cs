@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HashTable
 {
-    internal class MyMapNode<K,V>
+    internal class MyMapNode<K, V>
     {
         internal int size;
 
@@ -78,11 +78,33 @@ namespace HashTable
             return linkedlist;
         }
 
-        
+
         public struct KeyValue<k, v>
         {
             public k Key { get; set; }
             public v Value { get; set; }
+        }
+        public void Remove(K key)
+        {
+            int position = ArrayPosition(key);
+            LinkedList<KeyValue<K, V>> linkedlist = GetLinkedList(position);
+
+            bool itemFound = false;
+            KeyValue<K, V> foundItem = default(KeyValue<K, V>);
+
+            foreach (KeyValue<K, V> item in linkedlist)
+            {
+                if (item.Key.Equals(key))
+                {
+                    itemFound = true;
+                    foundItem = item;
+                }
+            }
+            //if item is found then remove it from the linkedlist
+            if (itemFound)
+            {
+                linkedlist.Remove(foundItem);
+            }
         }
     }
 }
